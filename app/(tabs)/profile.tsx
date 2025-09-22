@@ -1,14 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, Image} from 'react-native';
+import {icons} from "@/constants/icons";
 
 const Profile = () => {
-  return (
-    <View>
-      <Text>Profile component</Text>
-    </View>
-  );
+	return (
+		<View className={"bg-primary flex-1 px-10"}>
+			<View className={"flex justify-center items-center flex-1 flex-col gap-5"}>
+				<Image source={icons.person} className="size-10" tintColor={"#ffffff"}/>
+				<Text className={"text-gray-500"}>
+					Profile
+				</Text>
+			</View>
+		</View>
+	);
 };
 
 export default Profile;
-
-const styles = StyleSheet.create({});
